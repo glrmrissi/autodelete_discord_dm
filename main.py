@@ -20,7 +20,7 @@ def play_deleted():
                 pyautogui.keyDown("shift")
                 time.sleep(0.2) 
                 print(f"Ícone 'nencontrado' encontrado em: {nencontrado}")
-                icone = pyautogui.locateCenterOnScreen("icone.png")
+                icone = pyautogui.locateCenterOnScreen("imgs/icone.png")
                 if icone:
                     print(f"Ícone principal encontrado em: {icone}")
                     x2, y2 = icone 
@@ -65,5 +65,6 @@ btn_stop.pack(padx=10, pady=10)
 
 hotkey_thread = Thread(target=listen_hotkey, daemon=True)
 hotkey_thread.start()
+
 
 root.mainloop()
