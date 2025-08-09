@@ -7,14 +7,14 @@ import keyboard
 stop_event = Event()
 
 def play_deleted():
-    scroll_amount = 300
+    scroll_amount = 355
     
     while not stop_event.is_set():
         try:
             nencontrado = pyautogui.locateCenterOnScreen("imgs/user.png", confidence=0.9)
             if nencontrado:
                 x, y = nencontrado
-                deslocamento = 50  
+                deslocamento = 299  
                 pyautogui.mouseDown(x + deslocamento, y)  
                 pyautogui.mouseUp(x + deslocamento, y)  
                 pyautogui.keyDown("shift")
@@ -68,3 +68,4 @@ hotkey_thread.start()
 
 
 root.mainloop()
+
