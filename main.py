@@ -11,19 +11,18 @@ def play_deleted():
     
     while not stop_event.is_set():
         try:
-            nencontrado = pyautogui.locateCenterOnScreen("imgs/user.png", confidence=0.9)
-            if nencontrado:
-                x, y = nencontrado
-                deslocamento = 300 
-                pyautogui.mouseDown(x + deslocamento, y + -10)  
-                pyautogui.mouseUp(x + deslocamento, y + -10)  
+            notfound = pyautogui.locateCenterOnScreen("imgs/user.png", confidence=0.95)
+            if notfound:
+                x, y = notfound
+                pyautogui.mouseDown(x + 300, y + -10)  
+                pyautogui.mouseUp(x + 300, y + -10)  
                 pyautogui.keyDown("shift")
                 time.sleep(0.1) 
-                print(f"Ícone 'nencontrado' encontrado em: {nencontrado}")
-                icone = pyautogui.locateCenterOnScreen("imgs/icone.png")
-                if icone:
-                    print(f"Ícone principal encontrado em: {icone}")
-                    x2, y2 = icone 
+                print(f"Ícone 'notfound' encontrado em: {notfound}")
+                icon = pyautogui.locateCenterOnScreen("imgs/icone.png")
+                if icon:
+                    print(f"Ícone principal encontrado em: {icon}")
+                    x2, y2 = icon 
                     pyautogui.mouseDown(x2, y2)  
                     time.sleep(0.1)  
                     pyautogui.mouseUp(x2, y2)
