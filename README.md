@@ -22,11 +22,19 @@ With a high confidence level, it won’t mistakenly detect the user’s status i
 ## Requirements
 
 You need to have **Python** installed on your system.  
-You can install it via the official Python website or by running:
+Install Python
 
-```cmd
-npm install python3
+Download Python 3.10 or higher from the official website:
+https://www.python.org/downloads/
+
+During installation, check the option "Add Python to PATH" before continuing.
+
+Install libraries
+
 ```
+pip install pyautogui keyboard pillow
+```
+
 ## How to run?
 
 1. Make sure you are in the correct project directory.
