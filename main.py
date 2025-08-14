@@ -14,7 +14,7 @@ def play_deleted():
     
     while not stop_event.is_set():
         try:
-            notfound = pyautogui.locateCenterOnScreen("imgs/bab.png", confidence=0.95)
+            notfound = pyautogui.locateCenterOnScreen("imgs/user.png", confidence=0.95)
             if notfound:
                 x, y = notfound
                 notfound_count += 1
@@ -37,7 +37,7 @@ def play_deleted():
                     pyautogui.mouseUp(x2, y2)
                     pyautogui.keyUp("shift")
                 else:
-                    # print("Icon não encontrado → rolando para cima")
+                    # print("Icon não encontrado rolando para cima")
                     pyautogui.keyUp("shift")
                     time.sleep(0.1)
             else:
@@ -75,5 +75,6 @@ btn_stop.pack(padx=10, pady=10)
 
 hotkey_thread = Thread(target=listen_hotkey, daemon=True)
 hotkey_thread.start()
+
 
 root.mainloop()
